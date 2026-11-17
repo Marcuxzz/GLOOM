@@ -1,3 +1,22 @@
+# Atualização automática do site (V7.3)
+
+A partir da **versão V7.3 do site**, os botões de Windows e Android consultam automaticamente a **última Release estável pública** de [Marcuxzz/GLOOM](https://github.com/Marcuxzz/GLOOM/releases/latest). O site também mostra automaticamente a tag, como `v1.0.1`.
+
+**Depois de publicar o site V7.3 no Cloudflare Pages uma vez, não é necessário modificar os links nem republicar o HTML para atualizar somente o jogo.**
+
+Como publicar versões seguintes:
+
+1. Compile o jogo no GameMaker e teste as compilações.
+2. Crie uma **nova Release pública estável** com uma nova tag (`v1.0.1`, `v1.0.2` etc.) em https://github.com/Marcuxzz/GLOOM/releases/new.
+3. Anexe **os dois arquivos exatamente com estes nomes**: `GLOOM-Windows.zip` e `GLOOM-Android.apk`.
+4. Publique a Release. Na próxima visita/recarga, o site consultará o GitHub e atualizará versão e links automaticamente (com pequeno atraso possível de cache).
+
+Se uma plataforma não tiver arquivo na Release mais recente, o botão ficará indisponível até que seja anexado. O link estável de reserva é `https://github.com/Marcuxzz/GLOOM/releases/latest/download/<nome-do-arquivo>`.
+
+As versões anteriores do site (até V7.2) continuam usando links salvos em Supabase; as instruções a seguir permanecem úteis apenas para essas versões ou para links alternativos.
+
+---
+
 # Conectar os downloads ao site GLOOM
 
 O site oficial do GLOOM usa Cloudflare Pages para os arquivos estáticos e Supabase para administrar postagens e links de download.
